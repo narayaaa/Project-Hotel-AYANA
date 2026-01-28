@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYANA Login Page</title>
+    <link rel="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+    <div class="container">
+    <div class="left-panel">
+    </div>
+     <div class="right-panel">
+      <div class="form-container">
+        <div class="panel-drop"></div>
+        <h1>LOGIN</h1>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <button id="loginBtn">Log in</button>
+        <div class="login-link">
+          Don't have an account? <a href="signUp1.html">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+document.getElementById("loginBtn").addEventListener("click", () => {
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+
+  if (!email.checkValidity() || !password.checkValidity()) {
+    email.reportValidity();
+    password.reportValidity();
+    return;
+  }
+
+  window.location.href = "home.html"; // pindah ke home
+});
+</script>
+
+</body>
+</html>

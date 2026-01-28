@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background: white;
+  color: #4a3c2f;
+}
+
+/* Header */
+header {
+  background: #fff;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  width: 80px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Grid dua kolom */
+.hotel-grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Responsif: jadi 1 kolom di HP */
+@media (max-width: 768px) {
+  .hotel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hotel-card {
+  height: 350px;
+  width: 300px;
+  margin-top: 50px;
+  margin-right: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.hotel-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.hotel-card h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #7b5b3e;
+  font-weight: 250;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-weight: bold;
+  color: #7b5b3e;
+  font-size: 1rem;
+  font-weight: 600;
+}
+/* Footer */
+
+footer {
+  background: #7b5b3e;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.socials a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  margin-right: 5px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.linesfooter{
+background-color: #3f260e;
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
